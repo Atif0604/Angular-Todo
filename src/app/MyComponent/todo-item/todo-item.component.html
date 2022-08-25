@@ -1,0 +1,23 @@
+<!-- <p>todo-item works!</p> -->
+<div class="my-4">
+  <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-bg-dark rounded-3">
+          <h2 [ngClass]="{'strike': !todo.active}">{{todo.title}}</h2>
+          <p [ngClass]="{'strike': !todo.active}">{{todo.desc}}</p>
+          <button class="btn btn-outline-light btn-sm btn-danger" type="button"(click)="onClick(todo)">Delete</button>
+          <div class="mb-3 mt-3 form-check">
+            <input type="checkbox" class="form-check-input" id="todo{{i}}" (click)="onCheckBoxClick(todo)" [checked]="!todo.active">
+            <label class="form-check-label" for="todo{{i}}" >Mark As Done</label>
+          </div>
+        </div>
+      </div>
+      </div>
+<!-- <h5 [ngClass]="{'strike': !todo.active}">{{todo.title}}</h5>
+<p [ngClass]="{'strike': !todo.active}">{{todo.desc}}</p>
+<div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="todo{{i}}" (click)="onCheckBoxClick(todo)" [checked]="!todo.active">
+    <label class="form-check-label" for="todo{{i}}" >Mark As Done</label>
+  </div>
+<button class="btn btn-sm btn-danger" (click)="onClick(todo)">Delete</button>
+</div> -->
